@@ -9,3 +9,10 @@ Currently, two official plugins are available:
 
 # contact-info
 A small web app to manage and view contacts using react - redux - tailwind - daisyUI
+
+# Tech used
+ReactJS - TailwindCSS - DaisyUI
+
+# How to use and run
+run `npm install`
+then `npm run dev`
