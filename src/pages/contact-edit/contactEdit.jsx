@@ -99,6 +99,7 @@ const ContactEditPage = () => {
                         </div>
                     </div>
                 </div>
+                {errors.gender && <span className="text-error">Gender is required.</span>}
             </div>
             <div className="flex justify-end">
                 <button className={`btn text-white ${id == 'New'? 'btn-success': 'btn-warning'} w-[200px]`}>{id == 'New'? 'Create':'Edit'}</button>
