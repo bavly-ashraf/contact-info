@@ -12,15 +12,15 @@ const ContactListPage = () => {
     useEffect(()=>{
         (async function(){
             try{
-                // const contacts = (await axios.get('https://randomuser.me/api/?results=50'))?.data?.results;
-                // setContactList(contacts);
                 setFilteredContactsList(contacts);
+                // Adding letters to be filtered by in first name
                 const newIndexedList = [];
                 contacts.forEach(contact => {
                     if(!newIndexedList.includes(contact?.name?.first[0])){
                         newIndexedList.push(contact?.name?.first[0]);
                     }
                 });
+                // ordering letters alphabetically
                 setIndexedList(newIndexedList.sort());
             }catch(e){
                 alert(e);
@@ -31,8 +31,10 @@ const ContactListPage = () => {
 
     const filterContacts = (key) => {
         if(key == 'All'){
+            // getting all contacts
             setFilteredContactsList(contacts);
         }else{
+            // getting contacts according to pressed key (letter)
             const newContactList = contacts.filter(contact => contact?.name?.first[0] == key);
             setFilteredContactsList(newContactList);
         }

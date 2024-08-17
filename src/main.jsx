@@ -11,6 +11,7 @@ import { Provider } from 'react-redux';
 import { store } from './redux/store.jsx';
 import ContactEditPage from './pages/contact-edit/contactEdit.jsx';
 
+// defining routes
 const router = createBrowserRouter([
   {
     path:'/',

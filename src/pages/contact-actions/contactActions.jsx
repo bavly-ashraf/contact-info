@@ -12,7 +12,9 @@ const ContactActionsPage = () => {
         setFilteredContacts(contacts);
     },[contacts]);
 
+    // filter function for the search input
     const filterContacts = (e) => {
+        // lowering the case of every contact name and the name in the search box to get user without case sensitive
         const searchResults = contacts.filter(contact => `${contact?.name?.first?.toLowerCase()} ${contact?.name?.last?.toLowerCase()}`.includes(e.target.value.toLowerCase()));
         setFilteredContacts(searchResults);
     };

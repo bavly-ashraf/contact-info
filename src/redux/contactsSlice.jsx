@@ -15,12 +15,15 @@ export const contactsSlice = createSlice({
       state.value.push(action.payload);
     },
     editContact: (state,action) => {
+      // getting user index using the uuid property
       const userIndex = state.value.findIndex(el => el.login.uuid == action.payload.login.uuid);
       if(userIndex != -1){
+        // if user is founded edit it
         state.value[userIndex] = action.payload;
       }
     },
     deleteContact: (state, action) => {
+      // deleting user by uuid
       state.value = state.value.filter(el => el.login.uuid != action.payload);
     },
   },

@@ -13,9 +13,11 @@ function App() {
 
   useEffect(()=>{
     (async function(){
+      // checking if there's no users before fetching from API
       if(!contacts.length){
         try{
-          setLoading(true)
+          setLoading(true);
+          // loading data from the real API getting 50 users
           const contactsFromAPI = (await axios.get('https://randomuser.me/api/?results=50'))?.data?.results;
           dispatch(addAllContacts(contactsFromAPI));
           setLoading(false);
