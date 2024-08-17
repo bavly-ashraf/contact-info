@@ -26,7 +26,7 @@ const ContactListPage = () => {
                 alert(e);
             }
         })();
-    },[]);
+    },[contacts]);
 
 
     const filterContacts = (key) => {
