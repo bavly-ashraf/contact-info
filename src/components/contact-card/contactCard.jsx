@@ -6,7 +6,7 @@ const ContactCardComponent = ({name,picture,phoneNumber,email,id}) => {
         <div className="card card-side bg-base-100 shadow-xl w-[30%]">
             <figure>
                 <img
-                className="rounded-lg"
+                className="rounded-lg ms-3"
                 src={picture}
                 alt={name} />
             </figure>
